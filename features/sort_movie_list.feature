@@ -23,7 +23,11 @@ Background: movies have been added to database
 
 Scenario: sort movies alphabetically
   # your scenario here
+	When I follow "Movie Title"
+	Then I should see "Amelie" before "Chicken Run"
+	 
 
 Scenario: sort movies in increasing order of release date
   # your scenario here
-
+	When I follow "Release Date"
+	Then I should see "Chocolat" before "Amelie"
